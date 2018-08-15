@@ -1,0 +1,108 @@
+/*layout*/
+@media (min-width: 500px){
+    .page{
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+    }
+}
+.page > aside{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    flex-shrink: 0; /*禁止缩小*/
+    border-right: 1px solid #ddd;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.4);
+}
+.page > main{
+    overflow: auto;
+    flex-grow: 1;
+    background-color: #fff;
+    background-color: rgba(0,0,0,0.2);
+}
+/*aside*/
+.page > aside ul li{
+    margin: 10px;
+}
+.page > aside > .down button{
+    margin: 10px;
+}
+/*main*/
+.resume{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.resume > section{
+    margin: 50px 0;
+}
+.resume > section > h1{
+    text-align: center;
+    margin: 20px;
+}
+.resume > section > h2{
+    text-align: center;
+    margin: 20px;
+}
+.resume .profiles{
+    text-align: center;
+}
+.resume .skills > ul{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+.resume .skills > ul > li{
+    width: 48%;
+    padding: 10px;
+    margin-top: 10px; 
+}
+.resume .profiles{
+   border: 1px solid red;
+}
+.resume .projects li{
+    margin: 30px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: rgb(255,255,255);
+}
+.resume .projects header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.resume .projects header h3{
+    margin-right: 1em;
+}
+.resume .projects header .keywords{
+    float: right;
+}
+.resume .projects header .start{
+    display: flex;
+}
+
+/*editableSpan*/
+.editableSpan{
+    position: relative;
+    border: 1px solid;
+}
+.editableSpan > button{
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    font-size: 14px;
+    width: 2em;
+}
+.editableSpan:hover > button{
+    display: inline-block;
+}
+.editableSpan > span {
+    font-size: 28px;
+}
+.editableSpan > input {
+    padding: 2px 5px;
+}
